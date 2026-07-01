@@ -1,0 +1,5 @@
+id,file,line,function
+0,main.c,4,add
+1,main.c,10,subtract
+2,main.c,16,unused_function
+3,main.c,23,main
