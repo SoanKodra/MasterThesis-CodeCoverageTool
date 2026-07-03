@@ -88,9 +88,37 @@ GitHub: MasterThesis-CodeCoverageTool, SSH eingerichtet, aktueller Stand (M1/M2/
 
 ---
 
-## Offene Punkte
+## AVR: Interrupt-sicheres cov_mark und Host-Kommando-Terminierung (Task T4, Bezug FF3, funktionale Anforderung 6)
 
-- [ ] STM32/Nucleo: Kabel besorgen, Flashen und UART-Transport analog zu AVR nachziehen
-- [ ] Terminierung über Host-Kommando (M4)
-- [ ] Automatische Instrumentierung (M7) mit UART-Dump-Pfad verbinden
+Umsetzung der in Proposal Abschnitt 10.2 vorgesehenen Terminierungsstrategie 1 (Host-Kommando über UART-Interrupt).
+
+- uart.c erweitert um uart_enable_rx_interrupt() (RXEN0, RXCIE0, globale Interrupts über sei())
+- cov_mark() in coverage.c interrupt-sicher gemacht: atomares Bit-Setzen über ATOMIC_BLOCK (util/atomic.h), nur auf AVR aktiv (bedingt über Makro __AVR__), PC-Version unverändert
+- ISR (USART0_RX_vect) liest empfangenes Byte, setzt nur bei Byte 'D' ein Flag (volatile), Dump-Logik läuft in main(), nicht in der ISR selbst
+- Verifiziert: beliebige andere Tasten lösen keinen Dump aus, nur 'D' triggert korrekt
+
+## M7-Integration: automatisch instrumentierter Code auf AVR (Task T7)
+
+Erstmalige Verbindung von Parser-Prototyp (M7) und AVR-Zielcode.
+
+- raw_main.c bereinigt (main entfernt, nur noch Zielfunktionen add, subtract, unused_function), damit instrument.py sauber nur den eigentlichen Zielcode instrumentiert, nicht den AVR-Treiber
+- instrument.py auf bereinigten raw_main.c angewendet, 3 Probes automatisch eingefügt, probe_map_auto.csv automatisch erzeugt
+- Neuer AVR-Treiber (m7_integration_main.c) ruft die automatisch instrumentierten Funktionen auf, unused_function bewusst nicht aufgerufen
+- Ergebnis auf Hardware: IDs 0 und 1 covered, 2 korrekt als Lücke sichtbar, ausgelöst per Host-Kommando 'D'
+
+## Host-Anwendung: automatischer Report (Task T4, funktionale Anforderung 5)
+
+Neuer Ordner host, erste lauffähige CLI-Host-Anwendung (Python, pyserial).
+
+- uart_host_report.py verbindet sich über seriellen Port, sendet 'D', liest die Dump-Ausgabe, ordnet empfangene IDs über probe_map_auto.csv zurück auf Datei, Zeile, Funktion zu
+- Ergebnis: automatisch erzeugter, lesbarer Report ohne manuelles Mitlesen über screen
+- Bekannte Eigenheit: Board resettet sich beim Öffnen der seriellen Verbindung (CH340-Verhalten), kurze Wartezeit im Skript nötig
+
+**Status:** komplette Kette erstmals End-to-End auf Hardware funktionsfähig. Quellcode, automatische Instrumentierung, Compile, Flash, Host-Kommando-Terminierung, interrupt-sicheres cov_mark, automatischer Report.
+
+## Offene Punkte (aktualisiert)
+
+- [ ] STM32/Nucleo: Kabel besorgen, kompletten Ablauf analog zu AVR nachziehen
 - [ ] cov_dump()-Aufruf selbst von Instrumentierung ausschließen
+- [ ] Intrusiveness messen (Flash, RAM, Taktzyklen), Vergleich gegen Gcov (M8)
+- [ ] RTOS-Variante (M5)
