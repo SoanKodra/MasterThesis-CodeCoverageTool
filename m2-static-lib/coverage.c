@@ -27,6 +27,18 @@ void cov_mark(unsigned int id)
     bitmap[id / 8] |= (uint8_t)(1u << (id % 8));
 }
 
+int cov_is_covered(unsigned int id)
+{
+    /* Wie in cov_mark(): ungültige IDs werden nicht als Fehler behandelt,
+     * sondern einfach als "nicht covered" gewertet. */
+    if (id >= COV_MAX_PROBES) {
+        return 0;
+    }
+    /* Gleiche Bit-Extraktion wie in cov_dump(), nur jetzt als eigenständige,
+     * wiederverwendbare Abfrage statt fest in eine printf-Schleife eingebaut. */
+    return (bitmap[id / 8] >> (id % 8)) & 1;
+}
+
 void cov_dump(void)
 {
     /* Nur die IDs ausgeben, deren Bit gesetzt ist - keine Formatierung,

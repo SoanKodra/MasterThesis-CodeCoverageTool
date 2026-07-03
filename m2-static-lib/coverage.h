@@ -30,4 +30,14 @@ void cov_mark(unsigned int id);
  */
 void cov_dump(void);
 
+/*
+ * Prüft, ob die Probe mit der gegebenen ID als "ausgeführt" markiert ist.
+ * Reiner Lesezugriff auf die interne Bitmap, ohne jede Ausgabe-Logik -
+ * ermöglicht plattformspezifischem Code (z.B. UART-Dump auf AVR),
+ * eigene Ausgabeformate zu bauen, ohne die Bitmap-Kapselung aufzubrechen.
+ *
+ * Rückgabe: 1 wenn covered, 0 wenn nicht covered oder id ungültig.
+ */
+int cov_is_covered(unsigned int id);
+
 #endif
