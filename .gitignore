@@ -3,4 +3,5 @@ cov_test
 cov_test_v2
 covered_ids.txt
 covered_ids_v2.txt
-
+*.elf
+*.hex

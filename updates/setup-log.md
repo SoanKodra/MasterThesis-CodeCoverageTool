@@ -201,6 +201,19 @@ Ziel: den Übergang von Function-Coverage-artiger, manueller Instrumentierung (M
 
 **Status M7:** Funktionierender Prototyp einer automatischen, statement-genauen Instrumentierung mit tree-sitter steht. Bewusst noch offen: Ausschlussregeln (z.B. `cov_dump()` selbst nicht instrumentieren), Integration mit echtem Host-Kommando-Terminierungsmechanismus aus M4, Anwendung auf STM32-Zielcode statt PC-Testcode.
 
+---
+
+## 01.07.2026 — Git-Repository initialisiert
+
+Ziel: gesamten bisherigen Fortschritt (M1, M2, M7) unter Versionskontrolle bringen, bevor am Folgetag mit der echten Hardware weitergearbeitet wird.
+
+- `git config --global Soan Kodra`/`soankodra@gmail.com` gesetzt
+- `git init` in `~/master-projekt/` (Stolperfall unterwegs: erster Versuch versehentlich im Unterordner `updates/` ausgeführt, mit `rm -rf .git` rückgängig gemacht und am richtigen Ort neu initialisiert)
+- `.gitignore` angelegt für generierte/kompilierte Artefakte (`*.o`, ausführbare Testprogramme, Programmausgaben wie `covered_ids*.txt`) — nur handgeschriebener Quellcode und Konfigurationsdateien werden versioniert
+- Erster Commit: `git add .` + `git commit -m "Initial commit: M1 Toolchains, M2 PC-Bibliothek, M7 Parser-Prototyp"` — 16 Dateien, 665 Zeilen erfasst
+
+**Status:** Kompletter Stand von M1/M2/M7 als Ausgangspunkt (root commit) gesichert. Ab jetzt: nach jedem sinnvollen Fortschritt (z.B. erstes Board-Flashen morgen) erneut `git add .` + `git commit -m "..."`.
+
 ## Offene Punkte für später
 
 - [ ] `dialout`-Gruppenmitgliedschaft nach nächstem Reboot final verifizieren (vor erstem Nucleo-Anschluss, M2)
