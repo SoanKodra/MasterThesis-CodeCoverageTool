@@ -17,4 +17,6 @@ void uart_putchar(char c);
 // Zeichen für Zeichen mittels uart_putchar.
 void uart_puts(const char *s);
 
+void uart_enable_rx_interrupt(void);
+
 #endif

@@ -1,5 +1,8 @@
 #include "coverage.h"
 #include <stdio.h>
+#ifdef __AVR__
+#include <util/atomic.h>   // stellt ATOMIC_BLOCK bereit, AVR-spezifisch
+#endif
 
 /*
  * Interne Bitmap: 1 Bit pro Probe statt eines vollen Zählers (wie bei Gcov).
@@ -12,19 +15,20 @@ static uint8_t bitmap[(COV_MAX_PROBES + 7) / 8];
 
 void cov_mark(unsigned int id)
 {
-    /* Ungültige IDs (außerhalb der Bitmap-Größe) werden ignoriert,
-     * statt z.B. Speicher außerhalb des Arrays zu beschreiben. */
     if (id >= COV_MAX_PROBES) {
         return;
     }
 
-    /* id / 8  -> welches Byte im Array ist zuständig
-     * id % 8  -> welches Bit innerhalb dieses Bytes ist gemeint
-     * 1u << (id % 8) -> Zahl mit genau einer 1 an der richtigen Position
-     * |=  -> setzt nur dieses eine Bit, lässt alle anderen Bits im
-     *        selben Byte unverändert (bitweises ODER mit Zuweisung)
-     */
+#ifdef __AVR__
+    // ATOMIC_BLOCK deaktiviert kurzzeitig Interrupts, führt den Block aus,
+    // stellt den vorherigen Interrupt-Zustand danach wieder her.
+    // Verhindert, dass eine ISR mitten im Bit-Setzen dazwischenfunkt.
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+        bitmap[id / 8] |= (uint8_t)(1u << (id % 8));
+    }
+#else
     bitmap[id / 8] |= (uint8_t)(1u << (id % 8));
+#endif
 }
 
 int cov_is_covered(unsigned int id)

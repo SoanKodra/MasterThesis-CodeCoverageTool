@@ -7,6 +7,8 @@
 
 #include <avr/io.h>  // Definiert die Register-Namen (UBRR0H, UCSR0B, TXEN0, ...)
 #include "uart.h"    // Eigener Header mit den Funktionsdeklarationen (lokale Datei -> "" statt <>)
+#include <avr/interrupt.h>   // für die ISR-Definition und globale Interrupt-Steuerung
+
 
 // Ziel-Baudrate für die serielle Verbindung (muss auf Host-Seite,
 // z.B. beim Terminal-Programm, exakt gleich eingestellt sein)
@@ -60,4 +62,11 @@ void uart_puts(const char *s) {
         uart_putchar(*s);  // aktuelles Zeichen senden
         s++;               // Pointer einen Schritt weiterrücken (nächstes Zeichen)
     }
+}
+
+void uart_enable_rx_interrupt(void) {
+    // RXCIE0 = "RX Complete Interrupt Enable" - zusätzlich zum Sender (TXEN0)
+    // jetzt auch Empfänger (RXEN0) und dessen Interrupt aktivieren
+    UCSR0B |= (1 << RXEN0) | (1 << RXCIE0);
+    sei();   // globale Interrupts einschalten (Global Interrupt Enable Bit)
 }
