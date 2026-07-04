@@ -116,9 +116,26 @@ Neuer Ordner host, erste lauffähige CLI-Host-Anwendung (Python, pyserial).
 
 **Status:** komplette Kette erstmals End-to-End auf Hardware funktionsfähig. Quellcode, automatische Instrumentierung, Compile, Flash, Host-Kommando-Terminierung, interrupt-sicheres cov_mark, automatischer Report.
 
-## Offene Punkte (aktualisiert)
+## M7: Ausschlussregel fuer cov_dump (Bugfix)
 
-- [ ] STM32/Nucleo: Kabel besorgen, kompletten Ablauf analog zu AVR nachziehen
-- [ ] cov_dump()-Aufruf selbst von Instrumentierung ausschließen
-- [ ] Intrusiveness messen (Flash, RAM, Taktzyklen), Vergleich gegen Gcov (M8)
-- [ ] RTOS-Variante (M5)
+instrument.py instrumentiert jetzt keine Aufrufe von cov_dump() oder cov_dump_uart() mehr selbst. Verifiziert mit Testfall (eigene Funktion mit cov_dump()-Aufruf, blieb korrekt unangetastet, alle anderen Statements weiterhin instrumentiert).
+
+## M8: Intrusiveness auf AVR gemessen (Bezug FF2)
+
+Flash und RAM Overhead per avr-size, Vergleich Baseline (keine Instrumentierung) gegen instrumentierte Version. Erste Messung stark verzerrt durch ungenutzten printf-Pfad in cov_dump() (1708 Bytes Differenz). Mit -ffunction-sections, -fdata-sections und -Wl,--gc-sections bereinigt (entfernt nicht erreichbaren Code):
+
+Flash: 370 auf 498 Bytes, plus 128 Bytes fuer 3 Probes.
+RAM (bss): 0 auf 8 Bytes, entspricht exakt der Bitmap-Groesse bei COV_MAX_PROBES=64.
+
+Laufzeit-Overhead von cov_mark() zyklengenau simuliert mit simulavr (Ziel atmega2560, 16 MHz), nicht nur aus dem Datenblatt geschaetzt.
+
+Normalfall (gueltige ID, Beispiel id=3): 54 Taktzyklen, ca. 3,4 Mikrosekunden. Davon 44 Zyklen (ca. 2,75 Mikrosekunden) mit gesperrten Interrupts (ATOMIC_BLOCK), relevant fuer den probe effect aus Proposal Abschnitt 3.
+
+Kurzschluss-Pfad (ungueltige ID): 10 Zyklen, ca. 0,6 Mikrosekunden.
+
+Beobachtung: RET braucht auf dem ATmega2560 5 statt 4 Zyklen wegen 3-Byte-Ruecksprungadresse (grosses Flash), relevant fuer den Architekturvergleich in FF4.
+
+cov_dump_uart() nicht sinnvoll zyklengenau messbar, Dauer fast vollstaendig durch UART-Uebertragungszeit dominiert, nicht durch eigenen Code. Bei 9600 Baud rechnerisch ca. 1,04 ms pro Byte, ein typischer Dump mit 3 Probes und Kopf/Fusszeile ca. 65 Zeichen, also ca. 68 ms Gesamtdauer. Fuer den probe effect nicht relevant, da Dump erst nach Terminierung laeuft, nicht waehrend der eigentlichen Messung.
+
+**Status:** Intrusiveness-Metriken fuer AVR vollstaendig erfasst (Flash, RAM, Zyklen best/worst case). Referenzmessung fuer spaeteren Vergleich mit Gcov (M8, spaeter) und mit STM32.
+
