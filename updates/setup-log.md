@@ -139,3 +139,13 @@ cov_dump_uart() nicht sinnvoll zyklengenau messbar, Dauer fast vollstaendig durc
 
 **Status:** Intrusiveness-Metriken fuer AVR vollstaendig erfasst (Flash, RAM, Zyklen best/worst case). Referenzmessung fuer spaeteren Vergleich mit Gcov (M8, spaeter) und mit STM32.
 
+## M8: Gcov-Vergleich auf AVR und PC (Bezug FF2, Proposal Abschnitt 3)
+
+Direkter Test von GCCs eingebauter Coverage-Instrumentierung (--coverage Flag) auf beiden Plattformen, mit identischem Testcode (add, subtract, unused_function).
+
+| | PC (x86_64) | AVR (ATmega2560) |
+|---|---|---|
+| gcc/avr-gcc --coverage | laeuft durch, .gcda/.gcno erzeugt (156/790 Bytes) | Linker-Fehler: undefined reference to __gcov_exit |
+| Grund | Dateisystem und definiertes Programmende vorhanden | keine libgcov-Runtime fuer AVR, kein Dateisystem, Endlosschleifen ohne Programmende |
+
+**Ergebnis:** Gcov ist auf AVR ohne erhebliche Zusatzarbeit (eigene __gcov_exit-Implementierung, die z.B. ueber UART sendet statt Datei zu schreiben) gar nicht einsetzbar, nicht nur umstaendlich. Bestaetigt empirisch die in Proposal Abschnitt 3 und 6 beschriebene Forschungsluecke. Eigenes Tool (128 Bytes Flash, 8 Bytes RAM, ca. 3,4 Mikrosekunden pro Probe, siehe oben) loest genau dieses Problem mit vertretbarem Overhead.
