@@ -1,0 +1,1614 @@
+cycle_test_invalid.elf 0x0000: ,.Lproducer,.Ldebug_line0,L0,__vectors,__vector_default JMP e4 .Lname41,__trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__progmem_end,__dtors_start,__ctors_end,__progmem_start 
+cycle_test_invalid.elf 0x0000: ,.Lproducer,.Ldebug_line0,L0,__vectors,__vector_default CPU-waitstate
+cycle_test_invalid.elf 0x0000: ,.Lproducer,.Ldebug_line0,L0,__vectors,__vector_default CPU-waitstate
+cycle_test_invalid.elf 0x00e4: .Lname41,__trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__progmem_end,__dtors_start,__ctors_end,__progmem_start EOR R1, R1 SREG=[------Z-] 
+cycle_test_invalid.elf 0x00e6: .LVUS3                         OUT 0x3f, R1 
+cycle_test_invalid.elf 0x00e8: .Lname42,.LLST3                LDI R28, 0xff 
+cycle_test_invalid.elf 0x00ea: .Lname42,.LLST3+0x1            LDI R29, 0x21 
+cycle_test_invalid.elf 0x00ec: .Lname42,.LLST3+0x2            OUT 0x3e, R29 SP=0x21ff 
+cycle_test_invalid.elf 0x00ee: .Lname43                       OUT 0x3d, R28 SP=0x21ff 
+cycle_test_invalid.elf 0x00f0: .Lname43+0x1                   LDI R16, 0x00 
+cycle_test_invalid.elf 0x00f2: .Lname43+0x2                   OUT 0x3c, R16 
+cycle_test_invalid.elf 0x00f4: .Lname44,.Loc.0,L0,__do_copy_data LDI R17, 0x02 
+cycle_test_invalid.elf 0x00f6: .Loc.1                         LDI R26, 0x00 
+cycle_test_invalid.elf 0x00f8: .Lname45,.Loc.2                LDI R27, 0x02 
+cycle_test_invalid.elf 0x00fa: .Loc.3                         LDI R30, 0x72 
+cycle_test_invalid.elf 0x00fc: .Loc.4                         LDI R31, 0x01 
+cycle_test_invalid.elf 0x00fe: .Lname46,.Loc.5                LDI R16, 0x00 
+cycle_test_invalid.elf 0x0100: .Loc.6                         OUT 0x3b, R16 
+cycle_test_invalid.elf 0x0102: .Loc.7                         RJMP 108 
+cycle_test_invalid.elf 0x0102: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0108: .Lname48,.Loc.10,.L__do_copy_data_start CPI R26, 0x00 SREG=[------Z-] 
+cycle_test_invalid.elf 0x010a: .Loc.11                        CPC R27, R17 SREG=[------Z-] 
+cycle_test_invalid.elf 0x010c: .Loc.12                        BRNE ->0xfff6 .Lname47,.Loc.8,.L__do_copy_data_loop 
+cycle_test_invalid.elf 0x010e: .Lname49,L0,L0,.Loc.0,L0,__do_clear_bss LDI R18, 0x02 
+cycle_test_invalid.elf 0x0110: .Loc.1                         LDI R26, 0x00 
+cycle_test_invalid.elf 0x0112: .Loc.2                         LDI R27, 0x02 
+cycle_test_invalid.elf 0x0114: .Lname50,.Loc.3                RJMP 118 
+cycle_test_invalid.elf 0x0114: .Lname50,.Loc.3                CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011c: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      ST X+, R1 
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011c: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      ST X+, R1 
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011c: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      ST X+, R1 
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011c: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      ST X+, R1 
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011c: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      ST X+, R1 
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011c: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      ST X+, R1 
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011c: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      ST X+, R1 
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[--HS-N-C] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011c: .Loc.7                         CPU-waitstate
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      ST X+, R1 
+cycle_test_invalid.elf 0x0116: .do_clear_bss_loop,.Loc.4      CPU-waitstate
+cycle_test_invalid.elf 0x0118: .Lname51,.do_clear_bss_start,.Loc.5 CPI R26, 0x08 SREG=[------Z-] 
+cycle_test_invalid.elf 0x011a: .Loc.6                         CPC R27, R18 SREG=[------Z-] 
+cycle_test_invalid.elf 0x011c: .Loc.7                         BRNE ->0xfff8 .do_clear_bss_loop,.Loc.4      
+cycle_test_invalid.elf 0x011e: .Lname52,L0,L0               CALL 0x12a SP=0x21fe 0x91 SP=0x21fd 0x0 SP=0x21fc 0x0 
+cycle_test_invalid.elf 0x011e: .Lname52,L0,L0               CPU-waitstate
+cycle_test_invalid.elf 0x011e: .Lname52,L0,L0               CPU-waitstate
+cycle_test_invalid.elf 0x011e: .Lname52,L0,L0               CPU-waitstate
+cycle_test_invalid.elf 0x011e: .Lname52,L0,L0               CPU-waitstate
+cycle_test_invalid.elf 0x012a: .Loc.0,L0,.Loc.1,.LFB0,main   LDI R24, 0xe7 
+cycle_test_invalid.elf 0x012c: .Loc.0,L0,.Loc.1,.LFB0,main+0x1 LDI R25, 0x03 
+cycle_test_invalid.elf 0x012e: .Lname55                       CALL 0x134 SP=0x21fb 0x99 SP=0x21fa 0x0 SP=0x21f9 0x0 
+cycle_test_invalid.elf 0x012e: .Lname55                       CPU-waitstate
+cycle_test_invalid.elf 0x012e: .Lname55                       CPU-waitstate
+cycle_test_invalid.elf 0x012e: .Lname55                       CPU-waitstate
+cycle_test_invalid.elf 0x012e: .Lname55                       CPU-waitstate
+cycle_test_invalid.elf 0x0134: .Lname56,L0,L0,.LFE0,.Loc.0,L0,.Loc.1,.LFB6,.LVL0,cov_mark MOVW R18, R24 
+cycle_test_invalid.elf 0x0136: .Loc.2,.Loc.3                  CPI R24, 0x40 SREG=[---S-N--] 
+cycle_test_invalid.elf 0x0138: .Lname57                       CPC R25, R1 SREG=[--------] 
+cycle_test_invalid.elf 0x013a: .Lname57+0x1                   BRCC ->0x0030 .Lname65,.Loc.22,.Loc.23,.Loc.24,.L1,.LBE10,.LBE13 
+cycle_test_invalid.elf 0x013a: .Lname57+0x1                   CPU-waitstate
+cycle_test_invalid.elf 0x016c: .Lname65,.Loc.22,.Loc.23,.Loc.24,.L1,.LBE10,.LBE13 RET SP=0x21fa 0x0 SP=0x21fb 0x0 SP=0x21fc 0x99 
+cycle_test_invalid.elf 0x016c: .Lname65,.Loc.22,.Loc.23,.Loc.24,.L1,.LBE10,.LBE13 CPU-waitstate
+cycle_test_invalid.elf 0x016c: .Lname65,.Loc.22,.Loc.23,.Loc.24,.L1,.LBE10,.LBE13 CPU-waitstate
+cycle_test_invalid.elf 0x016c: .Lname65,.Loc.22,.Loc.23,.Loc.24,.L1,.LBE10,.LBE13 CPU-waitstate
+cycle_test_invalid.elf 0x016c: .Lname65,.Loc.22,.Loc.23,.Loc.24,.L1,.LBE10,.LBE13 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 CPU-waitstate
+cycle_test_invalid.elf 0x0132: .Loc.2,.Loc.3,.Loc.4,.L2,.LVL0 RJMP 132 
