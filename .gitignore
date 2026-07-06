@@ -5,3 +5,4 @@ covered_ids.txt
 covered_ids_v2.txt
 *.elf
 *.hex
+freertos-avr-reference/

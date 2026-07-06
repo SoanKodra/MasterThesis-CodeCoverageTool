@@ -149,3 +149,30 @@ Direkter Test von GCCs eingebauter Coverage-Instrumentierung (--coverage Flag) a
 | Grund | Dateisystem und definiertes Programmende vorhanden | keine libgcov-Runtime fuer AVR, kein Dateisystem, Endlosschleifen ohne Programmende |
 
 **Ergebnis:** Gcov ist auf AVR ohne erhebliche Zusatzarbeit (eigene __gcov_exit-Implementierung, die z.B. ueber UART sendet statt Datei zu schreiben) gar nicht einsetzbar, nicht nur umstaendlich. Bestaetigt empirisch die in Proposal Abschnitt 3 und 6 beschriebene Forschungsluecke. Eigenes Tool (128 Bytes Flash, 8 Bytes RAM, ca. 3,4 Mikrosekunden pro Probe, siehe oben) loest genau dieses Problem mit vertretbarem Overhead.
+
+## M5: RTOS-Variante auf AVR (Bezug FF4, funktionale Anforderung 6)
+
+FreeRTOS-Kernel (feilipu/avrfreertos, MIT-lizenziert, explizite Mega2560-Unterstuetzung) eingebunden. Nur Kernkomponenten uebernommen (tasks.c, list.c, queue.c, port.c, heap_1.c), eigene schlanke FreeRTOSConfig.h geschrieben statt Beispielprojekt-Konfiguration zu uebernehmen.
+
+Zwei Stolpersteine beim Einrichten:
+- Board-Konfigurationsdatei (FreeRTOSBoardDefs.h) waehlte standardmaessig Timer2 mit externem 32,768-Hz-Quarz als Tick-Quelle, den das Board nicht hat. Umgestellt auf Timer1 (interner Timer, kein Zusatzhardware noetig).
+- Fehlender Header (timers.h) trotz deaktivierter Timer-Funktionalitaet (configUSE_TIMERS 0), nachtraeglich ergaenzt.
+
+Zwei Tasks umgesetzt: TaskApplication (ruft alle 500ms add/subtract auf, unused_function bewusst nicht, Tick-Rate ueber vTaskDelayUntil), TaskDumpHandler (pollt alle 50ms auf das per UART-Interrupt gesetzte Dump-Flag, fuehrt cov_dump_uart aus).
+
+Task-Sicherheit der Bitmap (funktionale Anforderung 6, jetzt auch fuer Task-Konkurrenz statt nur ISR-Konkurrenz): bestehendes ATOMIC_BLOCK in cov_mark() deaktiviert global alle Interrupts. Da der FreeRTOS-Scheduler auf AVR Tasks ausschliesslich ueber einen Timer-Interrupt (hier Timer1) wechselt, kann waehrend eines cov_mark()-Aufrufs kein Task-Wechsel stattfinden. Der bestehende Interrupt-Schutz aus M4 reicht daher ohne Aenderung auch fuer Task-zu-Task-Konkurrenz aus.
+
+**Ergebnis auf Hardware:** Dump ueber Host-Kommando funktioniert identisch zur Bare-Metal-Version (0 und 1 covered, 2 korrekt als Luecke), jetzt erzeugt durch zwei nebenlaeufige Tasks statt einer linearen main()-Schleife.
+
+**Vergleich Bare-Metal vs. RTOS (Flash/RAM, Bezug FF2/FF4):**
+
+| | Bare-Metal (M8, instrumentiert) | RTOS (M5, instrumentiert) |
+|---|---|---|
+| Flash | 498 Bytes | 5448 Bytes |
+| RAM | 8 Bytes | 4704 Bytes |
+
+RTOS-Grundoverhead ist massiv groesser als die eigentliche Coverage-Instrumentierung (Scheduler, Task-Stacks, Heap-Verwaltung). Bei 256 KB Flash und 8 KB RAM auf dem Mega2560 bleibt Flash unproblematisch (ca. 2%), RAM wird mit ca. 57% Belegung durch configTOTAL_HEAP_SIZE (4608 Bytes fuer zwei Task-Stacks) zum knappen Gut, relevant fuer die Skalierbarkeit bei mehr/groesseren Tasks in einer echten Zielanwendung.
+
+**Status:** M5 fuer AVR abgeschlossen. STM32-RTOS-Variante (FreeRTOS, offizieller Cortex-M-Port, deutlich besser unterstuetzt) folgt sobald Kabel verfuegbar.
+
+
