@@ -6,3 +6,5 @@ covered_ids_v2.txt
 *.elf
 *.hex
 freertos-avr-reference/
+cmsis-reference/
+cmsis-core-reference/
