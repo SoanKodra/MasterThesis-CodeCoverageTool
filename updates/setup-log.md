@@ -177,6 +177,10 @@ RTOS-Grundoverhead ist massiv groesser als die eigentliche Coverage-Instrumentie
 
 ## M1: STM32 Bare-Metal-Setup von Grund auf (Task T3)
 
+Verwendete Quellen (Commit-Stand zum Zeitpunkt des Downloads):
+- CMSIS-Device (STM32F4): github.com/STMicroelectronics/cmsis-device-f4
+- CMSIS-Core: github.com/ARM-software/CMSIS_5
+
 Nucleo-F411RE per ST-LINK erkannt (lsusb, openocd Verbindungstest: Cortex-M4 r0p1 erkannt, 6 Breakpoints, 4 Watchpoints). Kein STM32CubeIDE oder vorgefertigtes Projektgeruest verwendet, komplettes Setup manuell zusammengebaut.
 
 CMSIS-Header von offiziellen Quellen geholt (STMicroelectronics/cmsis-device-f4 fuer Chip-spezifische Register, ARM-software/CMSIS_5 fuer Cortex-M4-Core-Header), gezielt benoetigte Dateien kopiert statt volles Repo einzubinden (in .gitignore).
