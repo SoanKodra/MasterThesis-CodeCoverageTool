@@ -175,4 +175,19 @@ RTOS-Grundoverhead ist massiv groesser als die eigentliche Coverage-Instrumentie
 
 **Status:** M5 fuer AVR abgeschlossen. STM32-RTOS-Variante (FreeRTOS, offizieller Cortex-M-Port, deutlich besser unterstuetzt) folgt sobald Kabel verfuegbar.
 
+## M1: STM32 Bare-Metal-Setup von Grund auf (Task T3)
+
+Nucleo-F411RE per ST-LINK erkannt (lsusb, openocd Verbindungstest: Cortex-M4 r0p1 erkannt, 6 Breakpoints, 4 Watchpoints). Kein STM32CubeIDE oder vorgefertigtes Projektgeruest verwendet, komplettes Setup manuell zusammengebaut.
+
+CMSIS-Header von offiziellen Quellen geholt (STMicroelectronics/cmsis-device-f4 fuer Chip-spezifische Register, ARM-software/CMSIS_5 fuer Cortex-M4-Core-Header), gezielt benoetigte Dateien kopiert statt volles Repo einzubinden (in .gitignore).
+
+Eigenes Linker-Script geschrieben (Flash 512KB ab 0x08000000, RAM 128KB ab 0x20000000, Vector Table, .data/.bss-Sektionen).
+
+Zwei Stolpersteine beim ersten Kompilieren/Linken:
+- __libc_init_array undefined reference mit -nostdlib: gefixt durch -nostartfiles und --specs=nosys.specs statt -nostdlib (schliesst nur Programmstart-Dateien aus, nicht die komplette C-Bibliothek).
+- _init undefined reference (newlib erwartet OS-Unterbau): gefixt durch leeren _init()-Stub in main.c.
+
+**Ergebnis:** Minimalprogramm (LED-Blink auf PA5) erfolgreich kompiliert (788 Bytes Flash), geflasht und verifiziert ueber openocd (program/verify/reset), LED blinkt sichtbar auf echter Hardware.
+
+**Status:** M1 fuer STM32 abgeschlossen (Cross-Compile-Nachweis von vorher plus jetzt reales Flashen/Ausfuehren). Naechster Schritt: UART-Transport analog zu AVR.
 
