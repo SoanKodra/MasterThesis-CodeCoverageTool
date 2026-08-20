@@ -195,3 +195,34 @@ Zwei Stolpersteine beim ersten Kompilieren/Linken:
 
 **Status:** M1 fuer STM32 abgeschlossen (Cross-Compile-Nachweis von vorher plus jetzt reales Flashen/Ausfuehren). Naechster Schritt: UART-Transport analog zu AVR.
 
+## STM32: UART-Transport (Task T4)
+
+USART2 auf Nucleo-F411RE aktiviert (PA2=TX, PA3=RX, werkseitig mit ST-LINK Virtual COM Port verbunden, kein externer USB-Seriell-Chip noetig, 115200 Baud). Ablauf analog zu AVR-Register-Programmierung, aber mit STM32-spezifischem Dreischritt: Takt einschalten (GPIOA und USART2 separat), Pins auf Alternate Function AF7 umschalten, dann USART konfigurieren.
+
+Verifiziert per screen /dev/ttyACM0 115200, stabile Textausgabe vom Board.
+
+## STM32: Coverage-Bitmap ueber UART (Task T4/T5, Bezug FF1/FF2)
+
+coverage_dump_uart.c fuer STM32 geschrieben, identisches Prinzip wie bei AVR: sendet covered Probe-IDs ueber UART statt printf. Portabler Kern (coverage.c/coverage.h) komplett unveraendert wiederverwendet, keine Anpassung fuer STM32 noetig - bestaetigt die in Proposal Abschnitt 10.3 vorgesehene Trennung zwischen portablem Kern und Plattform-Schicht.
+
+Erster Build-Versuch scheiterte mit undefined reference to 'end' (sprintf benoetigt malloc/Heap, Linker-Script hatte keinen Heap-Bereich definiert). Gefixt durch Ergaenzung eines end/_end-Symbols am Ende der .bss-Sektion im Linker-Script.
+
+Ergebnis (Testablauf mit fester Wartezeit statt Host-Kommando): 0 und 1 covered, 2 korrekt als Luecke. Verifiziert per GDB/OpenOCD-Debugging (Breakpoint auf cov_dump_uart, Bitmap-Inhalt direkt im RAM inspiziert: korrekt 0x03 nach den zwei cov_mark-Aufrufen).
+
+## STM32: Host-Kommando-Terminierung ueber USART2-Interrupt (Task T4, Bezug FF3, funktionale Anforderung 6)
+
+Analog zu AVR: USART2 RX-Interrupt aktiviert (RXNEIE-Bit, NVIC_EnableIRQ), USART2_IRQHandler ueberschreibt den weak Default-Handler aus dem Startup-Code, prueft auf Kommando 'D', setzt volatile Flag, Dump-Logik laeuft in der Hauptschleife.
+
+Drei Bugs beim ersten Durchlauf, alle per GDB/OpenOCD auf Register-Ebene systematisch eingegrenzt statt geraten:
+
+1. Verschachtelter Funktionsklammerfehler: fehlende schliessende Klammer nach uart_puts() liess uart_enable_rx_interrupt() als verschachtelte (in C ungueltige) Funktion kompilieren. Erkannt durch leere nm-Ausgabe fuer das erwartete Symbol trotz vorhandenem Quellcode.
+
+2. OpenOCD-Prozess-Konflikt: zweite OpenOCD-Instanz konnte nicht starten, weil eine vorherige Debug-Session (GDB) den ST-LINK noch exklusiv belegte. Gefixt durch gezieltes Beenden des Hintergrundprozesses (pkill openocd).
+
+3. Eigentlicher Funktionsfehler: USART_CR1_RE (Receiver Enable) fehlte in der CR1-Konfiguration. NVIC korrekt aktiviert (ISER1 Bit 6 gesetzt, verifiziert per direktem Registerzugriff auf 0xE000E104), RXNEIE korrekt gesetzt, aber der Empfaenger selbst war nie eingeschaltet, weshalb nie ein Byte empfangen und folglich nie ein Interrupt ausgeloest wurde. Gefixt durch Ergaenzung von USART_CR1_RE in der CR1-Initialisierung.
+
+**Debugging-Methode:** GDB (gdb-multiarch) verbunden ueber OpenOCD-GDB-Server (Terminal-Trennung: OpenOCD als Server in einem Terminal, GDB-Client in einem zweiten, screen-Test in einem dritten). Systematische Eingrenzung durch Registerwerte direkt im Speicher inspiziert (print/x auf rohe Peripherie-Adressen), statt am Anwendungscode zu raten - identifiziert das fehlende Bit exakt und ohne Mehrdeutigkeit.
+
+**Ergebnis:** Host-Kommando-Terminierung ueber USART2-Interrupt funktioniert identisch zu AVR (Tastendruck 'D' loest Dump aus, andere Zeichen werden ignoriert).
+
+**Status:** STM32 hat jetzt denselben End-to-End-Stand wie AVR: UART-Transport, Coverage-Bitmap-Dump, Host-Kommando-Terminierung ueber Interrupt.
