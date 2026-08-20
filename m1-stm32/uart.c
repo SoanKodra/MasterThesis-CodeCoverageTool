@@ -30,7 +30,7 @@ void uart_init(void) {
     USART2->BRR = 16000000UL / UART_BAUD;
 
     // Sender (TE) und USART selbst (UE) aktivieren
-    USART2->CR1 |= USART_CR1_TE | USART_CR1_UE;
+    USART2->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_UE;
 }
 
 void uart_putchar(char c) {
@@ -47,4 +47,16 @@ void uart_puts(const char *s) {
         uart_putchar(*s);
         s++;
     }
+}
+
+void uart_enable_rx_interrupt(void) {
+    // RXNEIE = "RX Not Empty Interrupt Enable" - USART soll bei
+    // eingehendem Byte einen Interrupt ausloesen (statt wie bisher
+    // nur senden zu koennen)
+    USART2->CR1 |= USART_CR1_RXNEIE;
+
+    // NVIC: dem Prozessorkern sagen, dass der USART2-Interrupt
+    // aktiv ueberwacht werden soll. Ohne diese Zeile wuerde die
+    // Peripherie zwar "wollen", der Kern wuerde es aber ignorieren.
+    NVIC_EnableIRQ(USART2_IRQn);
 }
