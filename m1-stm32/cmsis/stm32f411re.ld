@@ -64,4 +64,10 @@ SECTIONS
         . = ALIGN(4);
         _ebss = .;
     } > RAM
+
+    /* Heap-Bereich fuer malloc/sprintf - beginnt direkt nach .bss,
+     * "end" ist das Symbol, das newlib's _sbrk() erwartet. */
+    . = ALIGN(4);
+    end = .;
+    _end = .;
 }
