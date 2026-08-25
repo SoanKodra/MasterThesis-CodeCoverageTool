@@ -266,3 +266,23 @@ STM32 durchgehend guenstiger in Flash und Zyklen bei identischer Funktionalitaet
 
 **Status:** Intrusiveness-Metriken fuer STM32 vollstaendig erfasst (Flash, RAM, Zyklen), direkt vergleichbar mit AVR-Werten aus M8. Bestaetigt FF4 (Generalitaet) mit konkreten Zahlen: gleiches Konzept funktioniert auf beiden Architekturen, mit messbar unterschiedlichem aber in beiden Faellen vertretbarem Overhead.
 
+## STM32: RTOS-Variante (Task T5, Bezug FF4, funktionale Anforderung 6)
+
+Offizieller FreeRTOS-Kernel (github.com/FreeRTOS/FreeRTOS-Kernel, ARM_CM4F-Port) eingebunden, im Gegensatz zum AVR-Community-Fork (feilipu/avrfreertos) diesmal die autoritative Quelle direkt vom FreeRTOS-Projekt. Kernkomponenten kopiert (tasks.c, list.c, queue.c, timers.c, heap_1.c, portable/GCC/ARM_CM4F/port.c), eigene schlanke FreeRTOSConfig.h geschrieben (analog zu AVR, aber mit Cortex-M-spezifischen NVIC-Prioritaetseinstellungen configKERNEL_INTERRUPT_PRIORITY/configMAX_SYSCALL_INTERRUPT_PRIORITY, die der AVR-Port nicht braucht).
+
+ARM_CM4F-Port verlangt explizit aktivierte Hardware-FPU (STM32F411RE ist Cortex-M4F, hat eine FPU) - neue Compiler-Flags -mfpu=fpv4-sp-d16 -mfloat-abi=hard erstmals genutzt.
+
+Erster Kompilierversuch lief ueberraschend reibungslos durch (nur harmlose newlib-Warnungen wie gewohnt) - deutlich unkomplizierter als der AVR-Community-Fork mit seinen Board-Defs-Fallen.
+
+**Zentraler Bug beim ersten Hardware-Test:** Programm haengte sich beim Scheduler-Start komplett auf (per GDB Single-Stepping durch xPortStartScheduler() bis prvPortStartFirstTask() verfolgt - der SVC-Aufruf zum Starten des ersten Tasks landete faelschlich im WWDG_IRQHandler statt im erwarteten SVC-Handler).
+
+**Ursache:** neuere FreeRTOS-Kernel-Versionen nutzen "Direct Routing" - der Port erwartet, dass die Interrupt-Vector-Table direkt auf die FreeRTOS-eigenen Funktionsnamen zeigt (vPortSVCHandler, xPortPendSVHandler, xPortSysTickHandler), nicht auf die generischen CMSIS-Standardnamen (SVC_Handler, PendSV_Handler, SysTick_Handler), die der Startup-Code von ST als weak-Platzhalter bereitstellt. Ohne Anpassung ruft der Chip beim SVC-Interrupt weiterhin den leeren Default-Handler auf statt der FreeRTOS-Logik.
+
+**Fix:** drei Zeilen im Startup-Assembler (cmsis/startup_stm32f411xe.s) direkt in der Vector-Table geaendert: SVC_Handler zu vPortSVCHandler, PendSV_Handler zu xPortPendSVHandler, SysTick_Handler zu xPortSysTickHandler. Gefunden durch systematisches GDB-Single-Stepping bis zur exakten Fehlstelle, dann gezielte Codesuche (grep) nach den tatsaechlich vom Port bereitgestellten Funktionsnamen statt der erwarteten Standardnamen.
+
+**Ergebnis:** zwei nebenlaeufige Tasks (TaskApplication ruft alle 500ms add/subtract auf, TaskDumpHandler pollt auf Host-Kommando 'D' und dumpt), identisches Verhalten zur AVR-RTOS-Variante, mehrfach wiederholbar getestet.
+
+**Flash/RAM (RTOS-Grundoverhead):** text=42104, bss=4668 Bytes. Bei 512KB Flash und 128KB RAM auf der F411RE deutlich entspannter als bei AVR (dort ca. 57% RAM-Auslastung durch den RTOS-Heap, hier nur ca. 3,6%) - erwartbar, da STM32 wesentlich mehr RAM zur Verfuegung hat.
+
+**Status:** RTOS-Variante fuer beide Zielarchitekturen abgeschlossen (M5 vollstaendig). Bestaetigt FF4 (Generalitaet ueber Ausfuehrungsmodelle) fuer beide Plattformen.
+
