@@ -1,3 +1,4 @@
+
 # Setup-Log: Code Coverage für Embedded Software
 
 Log für die Masterarbeit. Technische Entscheidungen, Probleme, Lösungen.
@@ -27,8 +28,6 @@ Log für die Masterarbeit. Technische Entscheidungen, Probleme, Lösungen.
 | git | 2.53.0 |
 
 **Kernkonzept:** Statische Library mit Bit-pro-Probe-Bitmap (coverage.c/coverage.h), portabler Kern ist für beide Plattformen identisch. Nur UART-Transport und Terminierung sind plattformspezifisch (Proposal Abschnitt 10.3).
-
-**Repository:** GitHub `MasterThesis-CodeCoverageTool`, SSH eingerichtet.
 
 ---
 
