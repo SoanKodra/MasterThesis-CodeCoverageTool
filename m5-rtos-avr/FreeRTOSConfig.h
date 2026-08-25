@@ -18,14 +18,19 @@
 #define configCHECK_FOR_STACK_OVERFLOW  0
 #define configUSE_MALLOC_FAILED_HOOK    0
 #define configUSE_CO_ROUTINES           0
-#define configUSE_IDLE_HOOK             0
+#define configUSE_IDLE_HOOK             1
 #define configUSE_TICK_HOOK             0
 
 #define INCLUDE_vTaskDelay              1
 #define INCLUDE_vTaskDelayUntil         1
 #define INCLUDE_vTaskPrioritySet        0
 #define INCLUDE_uxTaskPriorityGet       0
-#define INCLUDE_vTaskDelete             0
+#define INCLUDE_vTaskDelete             1
 #define INCLUDE_vTaskSuspend            0
+
+// Vorwaertsdeklaration noetig, da tasks.c diese Funktion aufruft
+// (configUSE_IDLE_HOOK aktiviert), aber die Implementierung erst
+// in unserer eigenen main-Datei folgt.
+void vApplicationIdleHook(void);
 
 #endif
