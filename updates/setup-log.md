@@ -242,3 +242,27 @@ Gleicher Test wie bei AVR (siehe oben): arm-none-eabi-gcc --coverage auf identis
 
 **Status:** Gcov-Vergleich fuer beide Zielarchitekturen abgeschlossen. Bestaetigt die Forschungsluecke aus Proposal Abschnitt 6 architekturuebergreifend, nicht nur fuer eine einzelne Plattform.
 
+## STM32: Intrusiveness-Messung (Bezug FF2, Task T4)
+
+Flash/RAM-Overhead per arm-none-eabi-size, Vergleich Baseline (keine Instrumentierung) gegen instrumentierte Version (drei cov_mark-Aufrufe), mit -ffunction-sections/-fdata-sections/--gc-sections wie bei AVR.
+
+Flash: 628 auf 680 Bytes, plus 52 Bytes fuer 3 Probes.
+RAM (bss): 0 auf 8 Bytes, identisch zu AVR (exakt die Bitmap-Groesse bei COV_MAX_PROBES=64, architekturunabhaengig).
+
+Laufzeit-Overhead von cov_mark() gemessen mit dem eingebauten DWT-Zykluszaehler (Cortex-M-Hardware-Feature, CYCCNT-Register, ueber TRCENA/CYCCNTENA aktiviert) - kein Simulator noetig wie bei AVR (simulavr), direkte Hardware-Messung auf dem echten Chip.
+
+Erste Messung waehrend aktiver GDB-Debug-Session ergab 31 Zyklen (durch Single-Step-Overhead leicht verfaelscht), im freien Lauf ohne Debugger korrekt 32 Zyklen, konstant reproduzierbar ueber viele Wiederholungen.
+
+**Vergleich AVR vs. STM32 (identischer Testfall: 3 Probes, id=3 fuer Zyklenmessung):**
+
+| | AVR (ATmega2560) | STM32 (Cortex-M4) |
+|---|---|---|
+| Flash-Overhead (3 Probes) | +128 Bytes | +52 Bytes |
+| RAM-Overhead | +8 Bytes | +8 Bytes (identisch) |
+| Zyklen (cov_mark, id=3) | 54 | 32 |
+| Zeit bei 16 MHz | 3,4 Mikrosekunden | 2 Mikrosekunden |
+
+STM32 durchgehend guenstiger in Flash und Zyklen bei identischer Funktionalitaet - erklaerbar durch den kompakteren/effizienteren Thumb-2-Instruktionssatz gegenueber dem AVR-Befehlssatz. RAM-Overhead architekturunabhaengig identisch, da rein von der Bitmap-Groesse bestimmt, nicht von der Instruktionsarchitektur.
+
+**Status:** Intrusiveness-Metriken fuer STM32 vollstaendig erfasst (Flash, RAM, Zyklen), direkt vergleichbar mit AVR-Werten aus M8. Bestaetigt FF4 (Generalitaet) mit konkreten Zahlen: gleiches Konzept funktioniert auf beiden Architekturen, mit messbar unterschiedlichem aber in beiden Faellen vertretbarem Overhead.
+
