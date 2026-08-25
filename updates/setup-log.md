@@ -226,3 +226,19 @@ Drei Bugs beim ersten Durchlauf, alle per GDB/OpenOCD auf Register-Ebene systema
 **Ergebnis:** Host-Kommando-Terminierung ueber USART2-Interrupt funktioniert identisch zu AVR (Tastendruck 'D' loest Dump aus, andere Zeichen werden ignoriert).
 
 **Status:** STM32 hat jetzt denselben End-to-End-Stand wie AVR: UART-Transport, Coverage-Bitmap-Dump, Host-Kommando-Terminierung ueber Interrupt.
+
+## STM32: Gcov-Vergleich (Bezug FF2, Proposal Abschnitt 3)
+
+Gleicher Test wie bei AVR (siehe oben): arm-none-eabi-gcc --coverage auf identischem Testcode (add, subtract, unused_function).
+
+**Ergebnis:** identischer Fehler wie bei AVR - undefined reference to __gcov_exit beim Linken. Bestaetigt, dass das Problem nicht an einer einzelnen schwachen Toolchain liegt (z.B. AVR als 8-bit-Architektur mit wenig Ressourcen), sondern strukturell fuer Bare-Metal-Embedded-Targets generell gilt, unabhaengig von Rechenleistung/Architektur - fehlendes Dateisystem und fehlende Betriebssystem-Anbindung fuer libgcov's Exit-Handler betreffen sowohl das einfache 8-bit AVR als auch das deutlich potentere 32-bit Cortex-M4 gleichermassen.
+
+**Vergleichstabelle (aktualisiert, ergaenzt um STM32):**
+
+| | PC (x86_64) | AVR (ATmega2560) | STM32 (Cortex-M4) |
+|---|---|---|---|
+| gcc/avr-gcc/arm-none-eabi-gcc --coverage | laeuft durch, .gcda/.gcno erzeugt | Linker-Fehler: undefined reference to __gcov_exit | Linker-Fehler: undefined reference to __gcov_exit (identisch) |
+| Grund | Dateisystem und definiertes Programmende vorhanden | keine libgcov-Runtime, kein Dateisystem, Endlosschleifen ohne Programmende | dasselbe strukturelle Problem, unabhaengig von Architektur/Rechenleistung |
+
+**Status:** Gcov-Vergleich fuer beide Zielarchitekturen abgeschlossen. Bestaetigt die Forschungsluecke aus Proposal Abschnitt 6 architekturuebergreifend, nicht nur fuer eine einzelne Plattform.
+
