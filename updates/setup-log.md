@@ -286,3 +286,29 @@ Erster Kompilierversuch lief ueberraschend reibungslos durch (nur harmlose newli
 
 **Status:** RTOS-Variante fuer beide Zielarchitekturen abgeschlossen (M5 vollstaendig). Bestaetigt FF4 (Generalitaet ueber Ausfuehrungsmodelle) fuer beide Plattformen.
 
+## Proposal-Abgleich: identifizierte und geschlossene Luecken
+
+Systematischer Abgleich des bisherigen Fortschritts gegen Proposal (Forschungsfragen, funktionale Anforderungen, Meilensteinplan) ergab drei konkrete Luecken, alle heute geschlossen:
+
+### 1. M7-Integration auf STM32 nachgeholt
+
+Bisher lief automatisch instrumentierter Code (aus instrument.py) nur auf AVR, nie auf STM32. instrumented_target.c aus m7-parser nach STM32 kopiert, neuer Treiber (m7_integration_main.c) gebaut und auf Hardware verifiziert: 0 und 1 covered, 2 korrekt als Luecke, identisch zu AVR.
+
+**Nebenbefund beim Testen:** startup_stm32f411xe.s musste in zwei Varianten aufgeteilt werden (startup_stm32f411xe.s fuer Standard-Builds mit generischen CMSIS-Handlernamen, startup_stm32f411xe_rtos.s mit den FreeRTOS-Direct-Routing-Namen aus der gestrigen RTOS-Arbeit) - beide Build-Pfade nach der Trennung erneut auf Hardware verifiziert.
+
+### 2. Host-Anwendung gegen STM32 verifiziert
+
+uart_host_report.py lief bisher nur gegen AVR (/dev/ttyUSB0, 9600 Baud). Um Kommandozeilen-Parameter (--port, --baud) erweitert, funktioniert jetzt fuer beide Plattformen mit derselben Datei. Gegen STM32 (/dev/ttyACM0, 115200 Baud) getestet: identischer Report wie bei AVR (2/3 Probes, 66.7%).
+
+### 3. Terminierungsstrategien-Vergleich vervollstaendigt (Bezug FF3)
+
+Proposal Abschnitt 10.2 sieht vier Terminierungsstrategien als Vergleichspunkte vor. Bisher war nur Host-Kommando (M4) tatsaechlich gebaut. Die restlichen drei nachgeholt, alle auf AVR:
+
+**Timer-Strategie:** Timer1 im CTC-Modus (Vorteiler 1024, 16 MHz), Compare-Match-Interrupt loest automatisch alle 3 Sekunden einen Dump aus, kein Host-Eingriff noetig. Verifiziert: wiederholter automatischer Dump im 3-Sekunden-Takt.
+
+**Saettigungs-Strategie:** periodischer 1-Sekunden-Tick (gleicher Timer1-Mechanismus wie oben, aber nur als Pruefimpuls), Pruefsumme ueber alle gesetzten Bits verglichen, nach 3 Sekunden ohne Aenderung wird einmalig gedumpt. Zwei Iterationen noetig: erster Versuch loeste wiederholt aus (stable_ticks nicht persistent genug zurueckgesetzt), zweiter Versuch mit explizitem already_dumped-Flag korrekt: genau ein Dump, danach Stille.
+
+**Idle-Erkennung:** FreeRTOS vApplicationIdleHook() genutzt (configUSE_IDLE_HOOK aktiviert), Dump wird ausgeloest sobald der Scheduler in den Idle-Task wechselt (Anwendungstask beendet sich selbst per vTaskDelete). Kleiner Stolperstein: vApplicationIdleHook() muss in FreeRTOSConfig.h deklariert werden (nicht in der eigenen main-Datei), da tasks.c nur die Config-Datei einbindet, nicht die Anwendungsdatei selbst. Nach Fix: einmaliger korrekter Dump.
+
+**Status:** alle vier im Proposal genannten Terminierungsstrategien sind jetzt implementiert und auf Hardware verifiziert (Host-Kommando, Timer, Saettigung, Idle-Erkennung), womit FF3 vollstaendig empirisch beantwortet werden kann statt nur konzeptionell beschrieben zu sein.
+
